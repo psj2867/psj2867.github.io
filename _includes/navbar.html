@@ -11,15 +11,34 @@
         <li class="nav-item">
           <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
-        </li>
-        <li class="nav-item">
+        </li> -->
+        <!-- <li class="nav-item">
           <a class="nav-link" href="{{ "/posts" | relative_url }}">Posts</a>
-        </li>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="{{ "/categories/f1" | relative_url }}">f1</a>
+        </li> -->
+
+        <div><!--assign div-->
+          {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+          {% assign categories_list = site_categories | split:',' | sort %}
+        </div><!--assign div-->
+
+        {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+          {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ "/categories/" | relative_url }}/{{this_word}}">{{this_word}}</a>
+          </li>{% endunless %}
+        {% endfor %}
+
         <li class="nav-item">
-          <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
+          <a class="nav-link" href="{{ "/categories" | relative_url }}">category</a>
         </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
+        </li> -->
       </ul>
     </div>
   </div>
