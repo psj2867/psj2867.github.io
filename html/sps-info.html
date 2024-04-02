@@ -1,0 +1,489 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="output-content" class="relative h-max min-h-full px-[60px]">
+        <style>
+            #output-content {
+                margin: 0;
+                word-wrap: break-word;
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.71;
+                letter-spacing: normal;
+                text-algin: justify;
+            }
+
+            #output-content>p {
+                margin: 0;
+                word-wrap: break-word;
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.71;
+                letter-spacing: normal;
+            }
+
+            #output-content>table {
+                width: 100%;
+                max-width: 100%;
+                font-size: 14px;
+                border: 1px solid #333;
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            .section_title,
+            .provision_title {
+                font-size: 15px;
+            }
+
+            li>table {
+                max-width: 100%;
+                font-size: 14px;
+                border: 1px solid #333;
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+            }
+
+            td {
+                word-break: break-all;
+                text-align-last: unset !important;
+                border: 1px solid #333;
+            }
+
+            td>p {
+                text-align-last: unset !important;
+            }
+
+            #output-content>ol {
+                padding-left: 35px;
+            }
+
+            ol {
+                margin: 0px;
+                padding-left: 25px;
+                text-indent: 0px;
+            }
+
+            ol>li {
+                font-weight: normal;
+            }
+
+            #output-content>ol>li {
+                list-style-type: decimal;
+                font-size: 14px;
+            }
+
+            #output-content>ol>li>ol>li {
+                list-style-type: hangul;
+                font-size: 14px;
+            }
+
+            #output-content>ol>li>ol>li>ol {
+                counter-reset: numList;
+            }
+
+            #output-content>ol>li>ol>li>ol>li {
+                list-style-type: none;
+                font-size: 14px;
+                text-indent: -25px;
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(1)::before {
+                content: "1) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(2)::before {
+                content: "2) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(3)::before {
+                content: "3) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(4)::before {
+                content: "4) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(5)::before {
+                content: "5) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(6)::before {
+                content: "6) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(7)::before {
+                content: "7) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(8)::before {
+                content: "8) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(9)::before {
+                content: "9) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(10)::before {
+                content: "10) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(11)::before {
+                content: "11) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(12)::before {
+                content: "12) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(13)::before {
+                content: "13) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(14)::before {
+                content: "14) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(15)::before {
+                content: "15) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(16)::before {
+                content: "16) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(17)::before {
+                content: "17) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(18)::before {
+                content: "18) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(19)::before {
+                content: "19) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li:nth-child(20)::before {
+                content: "20) ";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol {
+                counter-reset: numList;
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li {
+                list-style-type: none;
+                font-size: 14px;
+                text-indent: -25px;
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(1)::before {
+                content: "가)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(2)::before {
+                content: "나)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(3)::before {
+                content: "다)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(4)::before {
+                content: "라)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(5)::before {
+                content: "마)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(6)::before {
+                content: "바)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(7)::before {
+                content: "사)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(8)::before {
+                content: "아)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(9)::before {
+                content: "자)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(10)::before {
+                content: "차)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(11)::before {
+                content: "카)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(12)::before {
+                content: "타)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(13)::before {
+                content: "파)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(14)::before {
+                content: "하)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(15)::before {
+                content: "가가)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(16)::before {
+                content: "가나)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(17)::before {
+                content: "가다)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(18)::before {
+                content: "가라)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(19)::before {
+                content: "가마)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li:nth-child(20)::before {
+                content: "가바)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol {
+                counter-reset: numList;
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li {
+                list-style-type: none;
+                font-size: 14px;
+                text-indent: -25px;
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(1)::before {
+                content: "(1)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(2)::before {
+                content: "(2)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(3)::before {
+                content: "(3)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(4)::before {
+                content: "(4)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(5)::before {
+                content: "(5)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(6)::before {
+                content: "(6)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(7)::before {
+                content: "(7)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(8)::before {
+                content: "(8)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(9)::before {
+                content: "(9)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(10)::before {
+                content: "(10)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(11)::before {
+                content: "(11)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(12)::before {
+                content: "(12)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(13)::before {
+                content: "(13)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(14)::before {
+                content: "(14)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(15)::before {
+                content: "(15)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(16)::before {
+                content: "(16)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(17)::before {
+                content: "(17)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(18)::before {
+                content: "(18)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(19)::before {
+                content: "(19)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(20)::before {
+                content: "(20)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+                counter-reset: numList;
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+                list-style-type: none;
+                font-size: 14px;
+                text-indent: -25px;
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(1)::before {
+                content: "(가)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(2)::before {
+                content: "(나)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(3)::before {
+                content: "(다)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(4)::before {
+                content: "(라)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(5)::before {
+                content: "(마)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(6)::before {
+                content: "(바)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(7)::before {
+                content: "(사)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(8)::before {
+                content: "(아)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(9)::before {
+                content: "(자)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(10)::before {
+                content: "(차)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(11)::before {
+                content: "(카)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(12)::before {
+                content: "(타)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(13)::before {
+                content: "(파)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(14)::before {
+                content: "(하)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(15)::before {
+                content: "(가가)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(16)::before {
+                content: "(가나)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(17)::before {
+                content: "(가다)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(18)::before {
+                content: "(가라)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(19)::before {
+                content: "(가마)";
+            }
+
+            #output-content>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:nth-child(20)::before {
+                content: "(가바)";
+            }
+        </style>
+        <p class="title"
+            style="text-align: center; font-size: 20px; font-weight:700; padding: 52px 0px 40px 0px; margin: 0px;">
+            개인정보처리방침</p><br>
+        <p id="provision_title_0" class="provision_title"><strong>제1조(목적)</strong></p>
+        <p style=""><span class="" style="font-weight:bold;text-decoration:underline;">psj2867</span>(이하 ‘회사'라고 함)는 회사가
+            제공하고자 하는 서비스(이하 ‘회사 서비스’)를 이용하는 개인(이하 ‘이용자’ 또는 ‘개인’)의 정보(이하 ‘개인정보’)를 보호하기 위해, 개인정보보호법, 정보통신망 이용촉진 및 정보보호 등에
+            관한 법률(이하 '정보통신망법') 등 관련 법령을 준수하고, 서비스 이용자의 개인정보 보호 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침(이하 ‘본
+            방침’)을 수립합니다.</p><br>
+        <p id="provision_title_1" class="provision_title"><strong>제2조(개인정보 처리의 원칙)</strong></p>
+        <p style="">개인정보 관련 법령 및 본 방침에 따라 회사는 이용자의 개인정보를 수집할 수 있으며 수집된 개인정보는 개인의 동의가 있는 경우에 한해 제3자에게 제공될 수 있습니다. 단, 법령의
+            규정 등에 의해 적법하게 강제되는 경우 회사는 수집한 이용자의 개인정보를 사전에 개인의 동의 없이 제3자에게 제공할 수도 있습니다.</p><br>
+        <p id="provision_title_2" class="provision_title"><strong>제3조(본 방침의 공개)</strong></p>
+        <ol>
+            <li style=""> 회사는 이용자가 언제든지 쉽게 본 방침을 확인할 수 있도록 회사 홈페이지 첫 화면 또는 첫 화면과의 연결화면을 통해 본 방침을 공개하고 있습니다.</li>
+            <li style=""> 회사는 제1항에 따라 본 방침을 공개하는 경우 글자 크기, 색상 등을 활용하여 이용자가 본 방침을 쉽게 확인할 수 있도록 합니다.</li>
+        </ol><br>
+        <p id="provision_title_3" class="provision_title"><strong>제4조(본 방침의 변경)</strong></p>
+        <ol>
+            <li style=""> 본 방침은 개인정보 관련 법령, 지침, 고시 또는 정부나 회사 서비스의 정책이나 내용의 변경에 따라 개정될 수 있습니다.</li>
+            <li style=""> 회사는 제1항에 따라 본 방침을 개정하는 경우 다음 각 호 하나 이상의 방법으로 공지합니다.<ol>
+                    <li style=""> 회사가 운영하는 인터넷 홈페이지의 첫 화면의 공지사항란 또는 별도의 창을 통하여 공지하는 방법</li>
+                    <li style=""> 서면·모사전송·전자우편 또는 이와 비슷한 방법으로 이용자에게 공지하는 방법</li>
+                </ol>
+            </li>
+            <li style=""> 회사는 제2항의 공지는 본 방침 개정의 시행일로부터 최소 7일 이전에 공지합니다. 다만, 이용자 권리의 중요한 변경이 있을 경우에는 최소 30일 전에 공지합니다.
+            </li>
+        </ol><br>
+        <p id="provision_title_19" class="provision_title"><strong>제5조(개인정보 수집 방법)</strong></p>
+        <p style="">회사는 다음과 같은 방법으로 이용자의 개인정보를 수집합니다.</p>
+        <ol>
+            <li style="">이용자의 확장 프로그램 다운로드 통계</li>
+        </ol><br>
+        <p><strong><br>부칙</strong></p>
+        <p>제1조 본 방침은 <span class="" style="font-weight:bold;text-decoration:underline;">2024.04.02.</span>부터 시행됩니다.</p>
+    </div>
+</body>
+
+</html>
